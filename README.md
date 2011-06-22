@@ -39,4 +39,5 @@ Please make sure you have Ruby and Rubygems installed. You could do this via:
     gem -v
 
 If you don't have any of it first install ruby. (More info at http://www.ruby-lang.org/en/downloads)
+
 Then you have to install rubygems. (More info at http://rubygems.org/pages/download)
