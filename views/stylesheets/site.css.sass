@@ -8,20 +8,98 @@ $link-focus-color:   $link-color
 $link-active-color:  $link-color
 $link-visited-color: $link-color
 
+$grey: #a8b1bb
+$slategrey: #6f7f8f
+$darkgrey: #333333
+$black: #000000
+$white: #ffffff
+
 $blueprint-font-family:  'Century Gothic', 'Apple Gothic', 'Helvetica Neue', arial, sans-serif
 $blueprint-font-size:    13px
 $blueprint-grid-columns: 12
 $blueprint-grid-width:   60px
 $blueprint-grid-margin:  20px
 
+//-------------------- Mixins
+@mixin rounded($radius: 10px)
+  border-radius: $radius
+  -moz-border-radius: $radius
+  -webkit-border-radius: $radius
+  
+@mixin rounded-bottom($radius: 10px)
+  border-bottom-right-radius: $radius
+  -moz-border-bottom-right-radius: $radius
+  -webkit-border-bottom-right-radius: $radius
+  border-bottom-left-radius: $radius
+  -moz-border-bottom-left-radius: $radius
+  -webkit-border-bottom-left-radius: $radius
+  
+@mixin box_shadow($size: 5px)
+  -webkit-box-shadow: 0 0 $size #000
+  -moz-box-shadow: 0 0 $size #000
+  -box-shadow: 0 0 $size #000
+
+@mixin webkit_fix
+  -webkit-margin-before: 0
+  -webkit-margin-after: 0
+  -webkit-padding-start: 0
+  
+@mixin background
+  background: $slategrey url('/images/background.png')
+  
+@mixin left
+  float: left
+
+@mixin right
+  float: right
+
+@mixin clear
+  clear: both
+
 +global-reset
 
 +blueprint-typography
+
+html, body
+  height: 100%
+  color: $darkgrey
+
+html
+  @include background
 
 a
   +link-colors($link-color, $link-hover-color, $link-focus-color, $link-active-color, $link-visited-color)
 
 #main
-  padding: 50px
-  text-align: center
+  padding: 10px
+  background: $white
+  @include rounded-bottom(15px)
   +container
+  $width: 930px
+  border: 4px solid $darkgrey
+  border-top: none
+  @include box_shadow(7px)
+  
+  section
+    margin-bottom: 10px
+    
+    &#header
+      img
+        margin: -10px -10px 0 -10px
+        border-bottom: 1px solid $darkgrey
+      border-bottom: 1px solid $darkgrey
+    
+    &#current_projects
+      width: $width * 0.3 -1px
+      border-right: 1px solid $darkgrey
+      @include left
+    
+    &#server_infrastructure
+      width: $width * 0.7
+      padding-left: 15px
+      @include left
+      
+    
+    &#footer
+      @include clear
+      margin-bottom: 0px
