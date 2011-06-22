@@ -49,7 +49,7 @@ configure :build do
   # activate :smusher
 
   # Generate ugly/obfuscated HTML from Haml
-  activate :ugly_haml
+  # activate :ugly_haml
   
   # Or use a different image path
   # set :http_path, "/Content/images/"

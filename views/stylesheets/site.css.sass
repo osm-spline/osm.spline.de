@@ -20,6 +20,7 @@ $blueprint-grid-columns: 12
 $blueprint-grid-width:   60px
 $blueprint-grid-margin:  20px
 
+$width: 930px
 //-------------------- Mixins
 @mixin rounded($radius: 10px)
   border-radius: $radius
@@ -75,7 +76,7 @@ a
   background: $white
   @include rounded-bottom(15px)
   +container
-  $width: 930px
+  width: $width
   border: 4px solid $darkgrey
   border-top: none
   @include box_shadow(7px)
