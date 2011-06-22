@@ -19,20 +19,20 @@ How to make changes
 ------
 
 You have to install middleman via:
-	sudo gem install middleman
+    sudo gem install middleman
 
 Now you can run the middleman-server with:
-	mm-server
+    mm-server
 
 To build the static-files just do:
-	mm-build
+    mm-build
 
 Dependencies
 ------
 
 Please make sure you have Ruby and Rubygems installed. You could do this via
-	ruby -v
-	gem -v
+    ruby -v
+    gem -v
 
 If you don't have any of it first install ruby. (More info at http://www.ruby-lang.org/en/downloads)
 Then you have to install rubygems. (More info at http://rubygems.org/pages/download)
