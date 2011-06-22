@@ -1,4 +1,63 @@
 - content_for :head do
-  %title The Middleman!
+  %title osm@spline
 
-%h1 The Middleman is watching.
+%h1
+  osm@spline
+%p
+  This is the OSM project at&nbsp
+  %a{:title => "Hauptseite - Spline", :href => "http://spline.de"}><
+    SPLINE
+  \. We are wokring at free software around the OpenStreetMap project. In the future we plan to set up a tiles mirror in order to provide a faster mapreading experience in middle europe.
+  
+%h2
+  Current projects
+%ul#projects
+  %li
+    %a{:title => "slomo/osm-spline-xapi - GitHub", :href => "http://github.com/slomo/osm-spline-xapi"}<
+      reimplementation
+    of the
+    %a{:title => "Xapi - OpenStreetMap Wiki", :href => "http://wiki.openstreetmap.org/wiki/Xapi"}
+      osm-xApi
+  %li
+    %a{:title => "map.osm.spline.de", :href => "http://map.osm.spline.de/"}
+      openlayers experiments
+  %li
+    tile server written in node (
+    %a{:title => "booo/node_tile - GitHub", :href => "https://github.com/booo/node_tile"}><
+      github
+    )
+  %li
+    planet file mirror @
+    %a{:title => "ftp://ftp.spline.de/pub/openstreetmap", :href => "ftp://ftp.spline.de/pub/openstreetmap"}
+      ftp.spline.de
+      
+%h2
+  Server infrastructure
+%h3
+  V-Server-Hosts
+%ul#vserver_hosts
+  %li promm.spline.de
+%h3
+  V-Servers
+%ul#vservers
+  %li
+    www.osm.spline.de, webspace, runs xapi instances
+  %li
+    ci.osm.spline.de, continuous integration system for xapi development
+  %li
+    db.osm.spline.de, database server with several databases (
+    %a{:title => "Munin :: overview", :href => "http://munin.spline.de/"}><
+      munin
+    )
+%h3
+  Databases (postgres)
+%ul#databases
+  %li
+    xapi_[berlin, germany, europe, world, testing, petra]
+  %li
+    routing
+%p
+  Petra contains predefined data which is useful for testing complex sql queries. "routing" contains routing data for berlin based on&nbsp
+  %a{:title => "pgRouting Project — Open Source Routing Library", :href => "http://www.pgrouting.org/"}><
+    pgrouting
+  \.
