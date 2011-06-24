@@ -1,32 +1,40 @@
 @import "compass"
 @import "blueprint"
 
+//-------------------- Variables
+// Colors
 $font-color:         #2a2a2a
 $link-color:         #0388a6
 $link-hover-color:   #009ce0
-$link-focus-color:   $link-color
-$link-active-color:  $link-color
-$link-visited-color: $link-color
-
 $grey: #a8b1bb
 $slategrey: #6f7f8f
 $darkgrey: #333333
 $black: #000000
 $white: #ffffff
 
+// Link Colors
+$link-focus-color:   $link-color
+$link-active-color:  $link-color
+$link-visited-color: $link-color
+
+// blueprint Stuff
 $blueprint-font-family:  'Century Gothic', 'Apple Gothic', 'Helvetica Neue', arial, sans-serif
 $blueprint-font-size:    13px
 $blueprint-grid-columns: 12
 $blueprint-grid-width:   60px
 $blueprint-grid-margin:  20px
 
+// Width of the #main container
 $width: 930px
+
 //-------------------- Mixins
+// all borders rounded
 @mixin rounded($radius: 10px)
   border-radius: $radius
   -moz-border-radius: $radius
   -webkit-border-radius: $radius
-  
+
+// only bottom borders rounded
 @mixin rounded-bottom($radius: 10px)
   border-bottom-right-radius: $radius
   -moz-border-bottom-right-radius: $radius
@@ -35,25 +43,20 @@ $width: 930px
   -moz-border-bottom-left-radius: $radius
   -webkit-border-bottom-left-radius: $radius
   
+// box shadows
 @mixin box_shadow($size: 5px)
   -webkit-box-shadow: 0 0 $size #000
   -moz-box-shadow: 0 0 $size #000
   -box-shadow: 0 0 $size #000
 
-@mixin webkit_fix
-  -webkit-margin-before: 0
-  -webkit-margin-after: 0
-  -webkit-padding-start: 0
-  
+// background image
 @mixin background
   background: $slategrey url('/images/background.png')
-  
+
 @mixin left
   float: left
-
 @mixin right
   float: right
-
 @mixin clear
   clear: both
 
