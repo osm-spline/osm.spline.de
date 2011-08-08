@@ -15,12 +15,14 @@ current projects
 * reimplementation_ of the osm-xapi_
 * openlayers experiments_
 * tile server written in node (github_)
+* prove of concept for a distributed tile server setup (github2_)
 * planet file mirror @ ftp.spline.de_
 
 .. _reimplementation: http://github.com/osm-spline/xappy.js
 .. _osm-xapi: http://wiki.openstreetmap.org/wiki/Xapi
 .. _experiments: http://map.osm.spline.de/
 .. _github: https://github.com/booo/node_tile
+.. _github2: https:/github.com/booo/drenderer
 .. _ftp.spline.de: http://ftp.spline.de/mirrors/openstreetmap/
 
 contact
@@ -35,13 +37,20 @@ contact
 server infrastructure
 ---------------------
 
-* V-Server-Hosts
-  * promm.spline.de (AMD Opteron 4x2.4Gh with 10 GB Memory)
-* V-Servers
-  * www.osm.spline.de (webspace, runs xapi instances)
-  * databases (postgres)
-    * xapi_{berlin, germany, europe, world, testing, petra [#]_}
-    * routing [#]_
+- V-Server-Host
+
+  + promm.spline.de (AMD Opteron 4x2.4Gh with 10 GB Memory)
+
+- V-Servers
+
+  + www.osm.spline.de (webspace, runs xapi instances)
+
+- databases (postgres)
+
+  + xapi_{berlin, germany, europe, world, testing, petra [#]_}
+  + routing [#]_
+  + mapnik [#]_
 
 .. [#] petra contains predefined data which is useful for testing complex sql queries.
 .. [#] Routing contains routing data for berlin based on pgrouting.
+.. [#] Used for rendering in combination with mapnik

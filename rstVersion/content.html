@@ -3,7 +3,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<meta name="generator" content="Docutils 0.8: http://docutils.sourceforge.net/" />
+<meta name="generator" content="Docutils 0.7: http://docutils.sourceforge.net/" />
 <title>osm &#64; spline</title>
 <link rel="stylesheet" href="./site.css" type="text/css" />
 </head>
@@ -21,6 +21,7 @@
 <li><a class="reference external" href="http://github.com/osm-spline/xappy.js">reimplementation</a> of the <a class="reference external" href="http://wiki.openstreetmap.org/wiki/Xapi">osm-xapi</a></li>
 <li>openlayers <a class="reference external" href="http://map.osm.spline.de/">experiments</a></li>
 <li>tile server written in node (<a class="reference external" href="https://github.com/booo/node_tile">github</a>)</li>
+<li>prove of concept for a distributed tile server setup (<a class="reference external" href="https:/github.com/booo/drenderer">github2</a>)</li>
 <li>planet file mirror &#64; <a class="reference external" href="http://ftp.spline.de/mirrors/openstreetmap/">ftp.spline.de</a></li>
 </ul>
 </div>
@@ -33,35 +34,38 @@
 </div>
 <div class="section" id="server-infrastructure">
 <h1>server infrastructure</h1>
-<ul>
-<li><p class="first">V-Server-Hosts
-* promm.spline.de (AMD Opteron 4x2.4Gh with 10 GB Memory)</p>
-</li>
-<li><p class="first">V-Servers
-* www.osm.spline.de (webspace, runs xapi instances)
-* databases (postgres)</p>
-<div class="system-message">
-<p class="system-message-title">System Message: ERROR/3 (<tt class="docutils">content.rst</tt>, line 43)</p>
-<p>Unexpected indentation.</p>
-</div>
-<blockquote>
 <ul class="simple">
-<li>xapi_{berlin, germany, europe, world, testing, petra <a class="footnote-reference" href="#id3" id="id1">[1]</a>}</li>
-<li>routing <a class="footnote-reference" href="#id4" id="id2">[2]</a></li>
+<li>V-Server-Host<ul>
+<li>promm.spline.de (AMD Opteron 4x2.4Gh with 10 GB Memory)</li>
 </ul>
-</blockquote>
+</li>
+<li>V-Servers<ul>
+<li>www.osm.spline.de (webspace, runs xapi instances)</li>
+</ul>
+</li>
+<li>databases (postgres)<ul>
+<li>xapi_{berlin, germany, europe, world, testing, petra <a class="footnote-reference" href="#id4" id="id1">[1]</a>}</li>
+<li>routing <a class="footnote-reference" href="#id5" id="id2">[2]</a></li>
+<li>mapnik <a class="footnote-reference" href="#id6" id="id3">[3]</a></li>
+</ul>
 </li>
 </ul>
-<table class="docutils footnote" frame="void" id="id3" rules="none">
+<table class="docutils footnote" frame="void" id="id4" rules="none">
 <colgroup><col class="label" /><col /></colgroup>
 <tbody valign="top">
 <tr><td class="label"><a class="fn-backref" href="#id1">[1]</a></td><td>petra contains predefined data which is useful for testing complex sql queries.</td></tr>
 </tbody>
 </table>
-<table class="docutils footnote" frame="void" id="id4" rules="none">
+<table class="docutils footnote" frame="void" id="id5" rules="none">
 <colgroup><col class="label" /><col /></colgroup>
 <tbody valign="top">
 <tr><td class="label"><a class="fn-backref" href="#id2">[2]</a></td><td>Routing contains routing data for berlin based on pgrouting.</td></tr>
+</tbody>
+</table>
+<table class="docutils footnote" frame="void" id="id6" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label"><a class="fn-backref" href="#id3">[3]</a></td><td>Used for rendering in combination with mapnik</td></tr>
 </tbody>
 </table>
 </div>
