@@ -20,9 +20,9 @@ current projects
 
 .. _reimplementation: http://github.com/osm-spline/xappy.js
 .. _osm-xapi: http://wiki.openstreetmap.org/wiki/Xapi
-.. _experiments: http://map.osm.spline.de/
+.. _experiments: http://osm.spline.de/map/
 .. _github: https://github.com/booo/node_tile
-.. _github2: https:/github.com/booo/drenderer
+.. _github2: https://github.com/booo/drenderer
 .. _ftp.spline.de: http://ftp.spline.de/mirrors/openstreetmap/
 
 contact
