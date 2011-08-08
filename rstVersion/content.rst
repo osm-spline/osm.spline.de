@@ -54,3 +54,6 @@ server infrastructure
 .. [#] petra contains predefined data which is useful for testing complex sql queries.
 .. [#] Routing contains routing data for berlin based on pgrouting.
 .. [#] Used for rendering in combination with mapnik
+..
+
+design stolen from *optikfluffel*
