@@ -5,7 +5,7 @@ osm @ spline
 about
 -----
 
-This is the OSM project at SPLINE_. We are wokring at free software around the OpenStreetMap project. In the future we plan to set up a tiles mirror in order to provide a faster mapreading experience in middle europe.
+This is the OSM project at SPLINE_. We develop and use Free Software in the context of OpenStreetMap. We try to be a plattform for your crazy ideas around geodata. Checkout out our projects below. If you like to get in touch with OpenStreetMap and Free Sotfware just drop us a mail.
 
 .. _SPLINE: http://www.spline.de
 
